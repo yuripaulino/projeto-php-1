@@ -1,7 +1,7 @@
 <?php
 include 'conn.php';
 
-$sql = "SELECT * From Bandas";
+$sql = "SELECT * From BANDAS";
 $result = $conn->query($sql);
 
 ?>
@@ -19,11 +19,18 @@ $result = $conn->query($sql);
             <th>ID</th>
             <th>Nome</th>
             <th>Data cadastro</th>
+            <th></th>
+            <th></th>
         </thead>
-        <?php while($dados = $result->fetch_assoc()){ ?>
+        <?php while($dados = $result->fetch_assoc()) { 
+            $id = $dados['ID_BANDAS'];    
+        ?>
         <tbody>
-            <td><?php echo "<a href='http://20.20.0.253/projPHP/projeto-php/alterar.php'>Alterar</a>";?></td>
-            <td><?php echo "<a href='http://20.20.0.253/projPHP/projeto-php/excluir.php'>Excluir</a>";?></td>
+            <td><?php echo $dados['ID_BANDAS']; ?></td>
+            <td><?php echo $dados['NOME_BANDAS']; ?></td>
+            <td><?php echo $dados['DATA_CADASTRO']; ?></td>
+            <td><?php echo "<a href='http://20.20.0.253/projPHP/projeto-php/alterar.php?id=$id'>Alterar</a>";?></td>
+            <td><?php echo "<a href='http://20.20.0.253/projPHP/projeto-php/excluir.php?id=$id'>Excluir</a>";?></td>
         </tbody>
         <?php } ?>
     </table>    
