@@ -19,6 +19,8 @@ $nome   = $dados['NOME_BANDAS'];
 </head>
 <body>
     <form action="update.php" method="post">
+        <label for="">Id da banda</label><br>
+        <input type="text" name="id" width=23 value="<?php echo $id; ?>"><br>
         <label for="">Nome da banda</label><br>
         <input type="text" name="band" value="<?php echo $nome;?>"><br>
         <input type="submit" value='Alterar'>        

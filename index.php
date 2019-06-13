@@ -33,7 +33,7 @@ $result = $conn->query($sql);
             <td><?php echo "<a href='http://20.20.0.253/projPHP/projeto-php/excluir.php?id=$id'>Excluir</a>";?></td>
         </tbody>
         <?php } ?>
-    </table>    
+    </table>   
 
 </body>
 </html>
