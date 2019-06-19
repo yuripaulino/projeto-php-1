@@ -14,6 +14,7 @@ $result = $conn->query($sql);
     <title>Document</title>
 </head>
 <body>
+<a href='http://localhost/projPHP/projeto-php/cadastro.php'><button>Cadastrar Banda</button></a><br>
     <table border=1>
         <thead>
             <th>ID</th>
@@ -29,8 +30,8 @@ $result = $conn->query($sql);
             <td><?php echo $dados['ID_BANDAS']; ?></td>
             <td><?php echo $dados['NOME_BANDAS']; ?></td>
             <td><?php echo $dados['DATA_CADASTRO']; ?></td>
-            <td><?php echo "<a href='http://20.20.0.253/projPHP/projeto-php/alterar.php?id=$id'>Alterar</a>";?></td>
-            <td><?php echo "<a href='http://20.20.0.253/projPHP/projeto-php/excluir.php?id=$id'>Excluir</a>";?></td>
+            <td><?php echo "<a href='http://localhost/projPHP/projeto-php/alterar.php?id=$id'>Alterar</a>";?></td>
+            <td><?php echo "<a href='http://localhost/projPHP/projeto-php/excluir.php?id=$id'>Excluir</a>";?></td>
         </tbody>
         <?php } ?>
     </table>   
